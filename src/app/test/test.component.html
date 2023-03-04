@@ -1,0 +1,9 @@
+<form #form="ngForm">
+  <input type="text" name="cpf" [(ngModel)]="cpf" #cpfInput="ngModel" cpfValidation>
+  <span
+    class="invalid-feedback"
+    style="color: red"
+    *ngIf="(cpfInput.touched || cpfInput.dirty) && cpfInput.value !== ''  && cpfInput.errors?.cpfValidation">
+      CPF inválido!
+  </span>
+</form>
