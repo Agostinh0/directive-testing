@@ -1,5 +1,5 @@
 import { Directive } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators } from '@angular/forms';
 
 @Directive({
   selector: '[cpfValidation]',
@@ -64,4 +64,12 @@ export class CpfValidationDirective implements Validators{
     return null;
   }
 
+}
+
+export class CustomValidators {
+  static validateDirective(directive: CpfValidationDirective): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} | null => {
+      return directive.validate(control);
+    };
+  }
 }

@@ -3,7 +3,6 @@ import { CpfValidationDirective } from './../cpf-validation.directive';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TestComponent } from './test.component';
-import { ChangeDetectionStrategy } from '@angular/core';
 
 describe('TestComponent', () => {
   let component: TestComponent;
@@ -38,7 +37,6 @@ describe('TestComponent', () => {
     fixture.detectChanges();
 
     const span = fixture.nativeElement.querySelector('span');
-    console.log(span);
 
     expect(component.cpf).toBe(cpfTestValue);
     expect(input.classList).toContain('ng-invalid');
