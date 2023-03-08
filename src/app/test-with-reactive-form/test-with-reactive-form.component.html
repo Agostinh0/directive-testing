@@ -1,8 +1,10 @@
 <form [formGroup]="testForm">
-    <input type="text" formControlName="cpf" cpfValidation>
-    <span 
-        *ngIf="testForm.get('cpf').invalid && testForm.get('cpf').dirty && testForm.get('cpf').value !== ''"
-        style="color: red">
-        CPF inválido!
-    </span>
+  <label>
+      Formulário reativo:  
+      <input type="text" formControlName="cpf" cpfValidation>
+      <span 
+      *ngIf="testForm.get('cpf').invalid && testForm.get('cpf').dirty && testForm.get('cpf').value !== ''"
+      style="color: red">CPF inválido!
+      </span>
+  </label>
 </form>

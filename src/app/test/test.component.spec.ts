@@ -41,7 +41,8 @@ describe('TestComponent', () => {
     expect(component.cpf).toBe(cpfTestValue);
     expect(input.classList).toContain('ng-invalid');
     expect(input.classList).toContain('ng-dirty');
-    expect(span.value).not.toBeNull();
+    expect(span).not.toBeNull();
+    expect(span.innerText).toBe('CPF inválido!');
   });
 
   it('should validate correct cpfs and show no message', async() => {
