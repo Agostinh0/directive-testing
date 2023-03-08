@@ -1,5 +1,5 @@
 import { Directive } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, NgModel, NG_VALIDATORS, ValidationErrors, Validator, ValidatorFn, Validators } from '@angular/forms';
 
 @Directive({
   selector: '[cpfValidation]',
@@ -14,7 +14,7 @@ export class CpfValidationDirective implements Validators{
   //Função de validação de CPF retirada e adaptada diretamente do site da Receita Federal:
   // http://www.receita.fazenda.gov.br/aplicacoes/atcta/cpf/funcoes.js
   validate(control: AbstractControl): ValidationErrors | null {
-    debugger;
+
     var soma = 0
     var resto;
 

@@ -13,12 +13,4 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  public hasText() {
-    return this.cpf !== '';
-  }
-
-  public getText() {
-    return this.cpf;
-  }
 }

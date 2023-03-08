@@ -37,7 +37,6 @@ describe('TestWithReactiveFormComponent', () => {
     fixture.detectChanges();
 
     const span = fixture.nativeElement.querySelector('span');
-    console.log(span);
 
     expect(cpfField.valid).toBeFalsy();
     expect(cpfField.errors).not.toBeNull();

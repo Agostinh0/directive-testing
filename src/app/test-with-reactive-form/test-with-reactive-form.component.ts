@@ -22,9 +22,4 @@ export class TestWithReactiveFormComponent implements OnInit {
       cpf: new FormControl('',CustomValidators.validateDirective(new CpfValidationDirective()))
     });
   }
-
-  public log() {
-    console.log(this.testForm);
-  }
-
 }
